@@ -687,58 +687,22 @@
                     </div>
                 </div>
             </div>
-    <!-- Videos Section -->
-<section class="container my-5">
-  <div class="row">
-    <!-- Video 1 -->
-    <div class="col-md-6 mb-4">
-      <video
-        class="video-on-scroll"
-        style="width: 100%; border-radius: 10px;"
-        muted
-        loop
-        playsinline
-      >
-        <source src="assets/img/video4.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </div>
-
-    <!-- Video 2 -->
-    <div class="col-md-6 mb-4">
-      <video
-        class="video-on-scroll"
-        style="width: 100%; border-radius: 10px;"
-        muted
-        loop
-        playsinline
-      >
-        <source src="assets/img/Video3.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </div>
-</section>
+    
+     <div class="container px-4 px-lg-5">
+                <!-- Featured Project Row-->
+                <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0 rounded" src="assets/img/B12.png" alt="..." /></div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left">
+                            <h4> Founder of Tawari Health App </h4>
+                            <p class="text-black-50 mb-0">Digital Healthcare Mobile Application designed to help people across the UAE easily locate nearby hospitals, book appointments with doctors, and request emergency medical services, enhancing access to timely and efficient care.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+ 
         </section>
 
-  
-        <script>
-  const videos = document.querySelectorAll(".video-on-scroll");
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.play();
-      } else {
-        entry.target.pause();
-      }
-    });
-  }, { threshold: 0.5 });
-
-  videos.forEach((video) => {
-    observer.observe(video);
-  });
-</script>
         
         <!-- Signup-->
         <section class="signup-section" id="signup">
