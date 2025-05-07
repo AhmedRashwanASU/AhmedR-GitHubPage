@@ -687,17 +687,14 @@
                     </div>
                 </div>
             </div>
-    
-        </section>
-
-        <!-- Videos Section -->
+    <!-- Videos Section -->
 <section class="container my-5">
   <div class="row">
     <!-- Video 1 -->
     <div class="col-md-6 mb-4">
       <video
+        class="video-on-scroll"
         style="width: 100%; border-radius: 10px;"
-        autoplay
         muted
         loop
         playsinline
@@ -710,8 +707,8 @@
     <!-- Video 2 -->
     <div class="col-md-6 mb-4">
       <video
+        class="video-on-scroll"
         style="width: 100%; border-radius: 10px;"
-        autoplay
         muted
         loop
         playsinline
@@ -722,6 +719,26 @@
     </div>
   </div>
 </section>
+        </section>
+
+  
+        <script>
+  const videos = document.querySelectorAll(".video-on-scroll");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.play();
+      } else {
+        entry.target.pause();
+      }
+    });
+  }, { threshold: 0.5 });
+
+  videos.forEach((video) => {
+    observer.observe(video);
+  });
+</script>
         
         <!-- Signup-->
         <section class="signup-section" id="signup">
