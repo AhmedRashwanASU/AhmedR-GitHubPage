@@ -11700,3 +11700,13 @@ body {
 .zoom-wrapper:hover .zoom-image {
   transform: scale(1.1);
 }
+.tilt-card {
+  border-radius: 20px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.tilt-card:hover {
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+}
+
