@@ -11685,3 +11685,18 @@ body {
 .footer {
   padding: 5rem 0;
 }
+.zoom-wrapper {
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.zoom-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.4s ease;
+}
+
+.zoom-wrapper:hover .zoom-image {
+  transform: scale(1.1);
+}
