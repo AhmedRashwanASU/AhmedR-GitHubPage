@@ -1033,23 +1033,19 @@
         <div class="row gx-4 gx-lg-5">
             <div class="col-md-10 col-lg-8 mx-auto text-center">
                 <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
-                <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
+                <h2 class="text-white mb-5">Submit your Email to Receive the Free Resources !</h2>
 
                 <!-- ✅ Modified Formspree Signup Form -->
                 <form action="https://formspree.io/f/mrbqaawj" method="POST">
                     <div class="row input-group-newsletter">
-                        <div class="col">
-                            <input class="form-control" name="email" type="email" placeholder="Enter email address..." required />
-                        </div>
-                        <div class="col-auto">
-                            <button class="btn btn-primary" type="submit">Notify Me!</button>
-                        </div>
+                    <div class="col"><input class="form-control" id="email" type="email" placeholder="Enter email address..." aria-label="Enter email address..." data-sb-validations="required,email" /></div>
+                    <div class="col-auto"><button class="btn btn-primary disabled" id="submitButton" type="submit">Notify Me!</button></div>
                     </div>
                 </form>
 
                 <!-- Optional Success Message -->
                 <div class="text-white mt-3">
-                    After submission, you'll receive updates directly to your inbox.
+                    The free resources will be delivered straight to your inbox.
                 </div>
             </div>
         </div>
