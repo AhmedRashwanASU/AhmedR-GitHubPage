@@ -1027,30 +1027,57 @@
                 </div>
             </div>
         </section>
+
         <!-- Signup-->
 <section class="signup-section" id="signup">
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5">
             <div class="col-md-10 col-lg-8 mx-auto text-center">
                 <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
-                <h2 class="text-white mb-5">Submit your Email to Receive the Free Resources !</h2>
+                <h2 class="text-white mb-5">Enter Email to Receive the Free Resources!</h2>
 
                 <!-- ✅ Modified Formspree Signup Form -->
-                <form action="https://formspree.io/f/mrbqaawj" method="POST">
-                    <div class="row input-group-newsletter">
-                    <div class="col"><input class="form-control" id="email" type="email" placeholder="Enter email address..." aria-label="Enter email address..." data-sb-validations="required,email" /></div>
-                    <div class="col-auto"><button class="btn btn-primary disabled" id="submitButton" type="submit">Notify Me!</button></div>
+                <form id="emailForm" action="https://formspree.io/f/mrbqaawj" method="POST">
+                    <div class="d-flex">
+                        <input class="form-control me-2" name="email" type="email" placeholder="Enter email address..." required />
+                        <button class="btn btn-primary" type="submit">Submit</button>
                     </div>
                 </form>
 
-                <!-- Optional Success Message -->
-                <div class="text-white mt-3">
-                    The free resources will be delivered straight to your inbox.
+                <!-- ✅ Thank You Message (Hidden Initially) -->
+                <div id="thankYouMessage" class="text-white mt-3 d-none">
+                    ✅ Thank you! The free resources will be delivered straight to your inbox within 24 hours.
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<!-- ✅ JavaScript to show the thank you message -->
+<script>
+document.getElementById("emailForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent default form action
+
+    const form = event.target;
+
+    fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok) {
+            form.reset();
+            document.getElementById("thankYouMessage").classList.remove("d-none");
+        } else {
+            alert("Oops! There was a problem submitting your email.");
+        }
+    });
+});
+</script>
+
+
 
         <!-- Contact-->
         <section class="contact-section bg-black" id="Contact-me">
